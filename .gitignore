@@ -1,0 +1,32 @@
+# Build artifacts
+.build/
+*.app/
+.DS_Store
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# macOS
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+
+# IDE
+.vscode/launch.json
+*.swp
+*.swo
+
+# Temporary files
+*~
+.#*
+
+# Personal configuration
+config.swift
