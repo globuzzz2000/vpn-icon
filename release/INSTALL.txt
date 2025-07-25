@@ -1,0 +1,26 @@
+VPN Icon - Installation Instructions
+====================================
+
+1. CONFIGURE:
+   - Open "Sources/main.swift" in a text editor
+   - Change "Home VPN" to your VPN name in the VPNConfig section
+   - Optionally customize the menu bar icons
+
+2. FIND YOUR VPN NAME:
+   Run this command in Terminal:
+   networksetup -listallnetworkservices
+
+3. BUILD (if needed):
+   ./build.sh
+
+4. INSTALL:
+   - Drag "VPN Icon.app" to your Applications folder
+   - Right-click and select "Open" (first time only)
+   - Add to Login Items in System Settings for auto-start
+
+5. USE:
+   - Left click menu bar icon: Show status menu
+   - Right click menu bar icon: Toggle VPN connection
+
+For full documentation, visit:
+https://github.com/globuzzz2000/vpn-icon

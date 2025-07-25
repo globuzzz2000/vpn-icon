@@ -6,6 +6,17 @@ import Network
 struct VPNConfig {
     static let vpnName = "Home VPN"  // Change this to your VPN name
     static let bundleIdentifier = "com.yourname.vpnicon"
+    
+    // Menu bar icons - you can customize these!
+    static let connectedIcon = "house.fill"     // Icon when VPN is connected
+    static let disconnectedIcon = "house"       // Icon when VPN is disconnected
+    
+    // Alternative icon options:
+    // Shield: "shield.fill" / "shield"
+    // Lock: "lock.circle.fill" / "lock.circle"  
+    // Network: "network" / "network.slash"
+    // Privacy: "eye.slash.fill" / "eye.slash"
+    // Dot: "record.circle.fill" / "record.circle"
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -14,13 +25,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // Icons for different states with proper styling
     private let connectedIcon: NSImage? = {
-        let image = NSImage(systemSymbolName: "house.fill", accessibilityDescription: "VPN Connected")
+        let image = NSImage(systemSymbolName: VPNConfig.connectedIcon, accessibilityDescription: "VPN Connected")
         image?.isTemplate = true
         return image
     }()
     
     private let disconnectedIcon: NSImage? = {
-        let image = NSImage(systemSymbolName: "house", accessibilityDescription: "VPN Disconnected")
+        let image = NSImage(systemSymbolName: VPNConfig.disconnectedIcon, accessibilityDescription: "VPN Disconnected")
         image?.isTemplate = true
         return image
     }()

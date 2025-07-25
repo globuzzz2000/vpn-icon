@@ -63,19 +63,25 @@ Look for your VPN in the list and use that exact name in the `VPNConfig.vpnName`
 
 ### Customizing Icons
 
-The app uses SF Symbols for the menu bar icons. You can change them in `Sources/main.swift`:
+The app uses configurable SF Symbols for the menu bar icons. Change them in `Sources/main.swift`:
 
 ```swift
-// Current: house / house.fill
-private let connectedIcon = NSImage(systemSymbolName: "house.fill", ...)
-private let disconnectedIcon = NSImage(systemSymbolName: "house", ...)
-
-// Alternative options:
-// shield / shield.fill
-// lock.circle / lock.circle.fill  
-// network / network.slash
+struct VPNConfig {
+    static let vpnName = "Your VPN Name"
+    
+    // Customize these icons:
+    static let connectedIcon = "house.fill"     // When connected
+    static let disconnectedIcon = "house"       // When disconnected
+}
 ```
 
+**Popular icon options:**
+- House: `house.fill` / `house` (current default)
+- Shield: `shield.fill` / `shield`
+- Lock: `lock.circle.fill` / `lock.circle`
+- Network: `network` / `network.slash`
+- Privacy: `eye.slash.fill` / `eye.slash`
+- Dot: `record.circle.fill` / `record.circle`
 ## Requirements
 
 - macOS 12.0 or later
