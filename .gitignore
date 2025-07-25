@@ -3,6 +3,10 @@
 *.app/
 .DS_Store
 
+# Release files
+release/
+*.zip
+
 # Xcode
 *.xcodeproj/
 *.xcworkspace/
@@ -27,6 +31,3 @@ Package.resolved
 # Temporary files
 *~
 .#*
-
-# Personal configuration
-config.swift
